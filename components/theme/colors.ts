@@ -20,4 +20,4 @@ export const themes = {
     [COLOR.SECONDARY]: '#fff',
     [COLOR.ACCENT]: '#F8D57E',
   },
-};
+}

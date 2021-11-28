@@ -1,3 +1,3 @@
-import { ReactNode } from 'react';
+import { ReactNode } from 'react'
 
-export type Children = ReactNode | ReactNode[];
+export type Children = ReactNode | ReactNode[]

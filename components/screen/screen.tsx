@@ -1,8 +1,8 @@
-import React, { CSSProperties, memo } from 'react';
-import { Children } from '../../utils';
+import React, { CSSProperties, memo } from 'react'
+import { Children } from '../../utils'
 
 interface Props {
-  children: Children;
+  children: Children
 }
 
 export const Screen = memo(({ children }: Props) => {
@@ -10,8 +10,8 @@ export const Screen = memo(({ children }: Props) => {
     background: '#000',
     width: '100%',
     minHeight: '100vh',
-  };
-  return <div style={styles}>{children}</div>;
-});
+  }
+  return <div style={styles}>{children}</div>
+})
 
-Screen.displayName = 'Screen';
+Screen.displayName = 'Screen'
