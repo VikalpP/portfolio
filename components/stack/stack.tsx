@@ -7,7 +7,6 @@ interface Props {
   fill?: boolean
   fillHorizontal?: boolean
   verticalAlign?: 'middle' | 'bottom'
-  alignBottom?: boolean
   padding?: Padding
   style?: CSSProperties
   className?: string
@@ -27,19 +26,29 @@ export const Stack = memo(
     opacity,
   }: Props) => {
     const containerStyle: CSSProperties = {
-      display: 'flex',
-      flexDirection: horizontal ? 'row' : 'column',
-      width: fill || fillHorizontal ? '100%' : undefined,
-      height: fill ? '100%' : undefined,
-      alignItems:
-        verticalAlign === 'middle' ? 'center' : verticalAlign === 'bottom' ? 'end' : undefined,
       padding: getPadding(padding),
       opacity,
       ...style,
     }
 
+    const classes = [
+      'flex',
+      horizontal ? 'flex-row' : 'flex-column',
+      fill ? 'w-100 h-100' : fillHorizontal ? 'w-100' : '',
+      verticalAlign === 'middle'
+        ? horizontal
+          ? 'items-center'
+          : 'justify-center'
+        : verticalAlign === 'bottom'
+        ? horizontal
+          ? 'items-end'
+          : 'justify-end'
+        : '',
+      className,
+    ].join(' ')
+
     return (
-      <div className={className} style={containerStyle}>
+      <div className={classes} style={containerStyle}>
         {children}
       </div>
     )

@@ -1,11 +1,17 @@
 import React from 'react'
-import { Stack } from '../../components'
+import { PageTitle, Stack } from '../../components'
 import { Children } from '../../utils'
 
 interface Props {
+  title?: string
   children: Children
 }
 
-export function Section({ children }: Props) {
-  return <Stack className='pt6 vh-100 flex' padding='none x-large'>{children}</Stack>
+export function Section({ title, children }: Props) {
+  return (
+    <Stack className='pt6 ph5 vh-100 flex relative overflow-hidden'>
+      {title ? <PageTitle>{title}</PageTitle> : null}
+      {children}
+    </Stack>
+  )
 }

@@ -7,11 +7,21 @@ export interface TextProps {
   fontSize?: number
   fontFamily?: 'Poppins' | 'M PLUS Rounded 1c'
   thin?: boolean
+  italic?: boolean
+  lineHeight?: number
   color?: COLOR
 }
 
 export const Text = memo(
-  ({ fontSize, children, fontFamily, thin, color = COLOR.SECONDARY }: TextProps) => {
+  ({
+    fontSize,
+    children,
+    italic,
+    fontFamily,
+    thin,
+    lineHeight,
+    color = COLOR.SECONDARY,
+  }: TextProps) => {
     const { getColor } = useTheme()
 
     const styles: CSSProperties = {
@@ -19,6 +29,8 @@ export const Text = memo(
       fontFamily: fontFamily ? `"${fontFamily}"` : undefined,
       fontWeight: thin ? '200' : undefined,
       color: getColor(color),
+      fontStyle: italic ? 'italic' : undefined,
+      lineHeight,
     }
 
     return <span style={styles}>{children}</span>

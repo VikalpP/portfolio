@@ -4,7 +4,7 @@ import { Button, COLOR, Logo, Spacer, Stack, Text } from '../../components'
 
 export function Nav() {
   return (
-    <header className='w-100 absolute top-0'>
+    <header className='w-100 fixed top-0'>
       <Stack horizontal fillHorizontal verticalAlign='middle' padding='large x-large'>
         <Logo />
         <Spacer size='small' />

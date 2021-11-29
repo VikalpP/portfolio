@@ -8,7 +8,7 @@ class MyDocument extends Document {
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
           <link
-            href='https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Poppins:wght@200;400&display=swap'
+            href='https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Poppins:wght@200;400&family=Righteous&display=swap'
             rel='stylesheet'
           />
           <link rel='stylesheet' href='https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css' />
