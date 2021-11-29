@@ -1,0 +1,14 @@
+.slideshow {
+  transform: translate3d(0, 0, 0);
+  animation: slideshow 8s infinite linear;
+}
+
+.slideshow > *:not(:last-child) {
+  margin-right: 128px;
+}
+
+@keyframes slideshow {
+  100% {
+    transform: translateX(calc(-50% - 64px));
+  }
+}

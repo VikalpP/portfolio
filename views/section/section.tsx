@@ -5,13 +5,17 @@ import { Children } from '../../utils'
 interface Props {
   title?: string
   children: Children
+  safeArea?: boolean
 }
 
-export function Section({ title, children }: Props) {
+export function Section({ title, children, safeArea = true }: Props) {
   return (
-    <Stack className='pt6 ph5 vh-100 flex relative overflow-hidden'>
-      {title ? <PageTitle>{title}</PageTitle> : null}
+    <Stack
+      horizontal
+      className={`pt6 ${safeArea ? 'ph5' : ''} vh-100 relative overflow-hidden`}
+    >
       {children}
+      {title ? <PageTitle>{title}</PageTitle> : null}
     </Stack>
   )
 }

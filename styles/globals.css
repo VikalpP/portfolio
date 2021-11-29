@@ -92,3 +92,11 @@ li:not(:last-child) {
 ::-webkit-scrollbar-thumb:window-inactive {
   background: var(--scrollbar-inactive-scroll);
 }
+
+.object-fit-contain {
+  object-fit: contain;
+}
+
+.br5 {
+  border-radius: 2rem;
+}

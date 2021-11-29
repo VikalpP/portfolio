@@ -1,4 +1,5 @@
 export * from './button'
+export * from './carousel'
 export * from './external-link'
 export * from './fading-overlay'
 export * from './logo'

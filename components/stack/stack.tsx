@@ -38,7 +38,7 @@ export const Stack = memo(
     const classes = [
       'flex',
       horizontal ? 'flex-row' : 'flex-column',
-      fill ? 'w-100 h-100' : fillHorizontal ? 'w-100' : '',
+      fill ? 'w-100 flex-auto' : fillHorizontal ? 'w-100' : '',
       verticalAlign === 'middle'
         ? horizontal
           ? 'items-center'
