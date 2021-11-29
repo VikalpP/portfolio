@@ -27,8 +27,6 @@ const addOnChangeListener = (query: string, onChange: (e: MediaQueryListEvent) =
 
 export function useColorScheme() {
   const [colorPreference, setColorPreference] = useState(getUserColorPreference())
-  console.log({ colorPreference })
-
   useEffect(() => {
     return addOnChangeListener('(prefers-color-scheme: light)', e => {
       setColorPreference(e.matches ? ColorPreference.LIGHT : ColorPreference.DARK)

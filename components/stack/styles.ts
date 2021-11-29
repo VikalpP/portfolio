@@ -16,3 +16,15 @@ export const getPadding = (padding?: Padding) => {
   if (!paddingEnd) return PADDING[paddingStart]
   return `${PADDING[paddingStart]} ${PADDING[paddingEnd]}`
 }
+
+const MAX_WIDTH = {
+  'x-large': 'mw8_5',
+  large: 'mw8',
+  normal: 'mw7',
+  small: 'mw6',
+  'x-small': 'mw4',
+  none: '',
+}
+
+export type MaxWidth = keyof typeof MAX_WIDTH
+export const getMaxWidth = (maxWidth: MaxWidth) => MAX_WIDTH[maxWidth]

@@ -1,5 +1,5 @@
 import React, { CSSProperties, memo, ReactNode } from 'react'
-import { getPadding, Padding } from './styles'
+import { getMaxWidth, getPadding, MaxWidth, Padding } from './styles'
 
 interface Props {
   children?: ReactNode | ReactNode[]
@@ -7,10 +7,12 @@ interface Props {
   fill?: boolean
   fillHorizontal?: boolean
   verticalAlign?: 'middle' | 'bottom'
+  horizontalAlign?: 'center' | 'end'
   padding?: Padding
   style?: CSSProperties
   className?: string
   opacity?: number
+  maxWidth?: MaxWidth
 }
 
 export const Stack = memo(
@@ -20,10 +22,12 @@ export const Stack = memo(
     fill,
     fillHorizontal,
     verticalAlign,
+    horizontalAlign,
     padding,
     style,
     className,
     opacity,
+    maxWidth,
   }: Props) => {
     const containerStyle: CSSProperties = {
       padding: getPadding(padding),
@@ -44,6 +48,16 @@ export const Stack = memo(
           ? 'items-end'
           : 'justify-end'
         : '',
+      horizontalAlign === 'center'
+        ? horizontal
+          ? 'justify-center'
+          : 'items-center'
+        : horizontalAlign === 'end'
+        ? horizontal
+          ? 'justify-end'
+          : 'items-end'
+        : '',
+      maxWidth ? getMaxWidth(maxWidth) : '',
       className,
     ].join(' ')
 

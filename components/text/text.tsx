@@ -5,7 +5,7 @@ import { COLOR, useTheme } from '../theme'
 export interface TextProps {
   children: string | Children
   fontSize?: number
-  fontFamily?: 'Poppins' | 'M PLUS Rounded 1c'
+  fontFamily?: 'Poppins' | 'M PLUS Rounded 1c' | 'Roboto'
   thin?: boolean
   italic?: boolean
   lineHeight?: number
