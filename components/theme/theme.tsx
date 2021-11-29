@@ -1,6 +1,7 @@
-import { createContext, useCallback, useContext, useMemo, useState } from 'react'
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { Children } from '../../utils'
 import { COLOR, THEME, themes } from './colors'
+import { ColorPreference, useColorScheme } from './utils'
 
 interface ThemeContextType {
   theme: THEME
@@ -15,15 +16,17 @@ interface Props {
 }
 
 export const ThemeProvider = ({ children }: Props) => {
-  const [theme, setTheme] = useState<THEME>(THEME.DARK)
+  const colorPreference = useColorScheme()
+  const [theme, setTheme] = useState<THEME>(
+    colorPreference === ColorPreference.LIGHT ? THEME.LIGHT : THEME.DARK,
+  )
+
   const toggleTheme = useCallback(() => {
     setTheme(currentTheme => (currentTheme === THEME.LIGHT ? THEME.DARK : THEME.LIGHT))
   }, [])
 
   const getColor = useCallback(
-    (color?: COLOR) => {
-      if (color) return themes[theme][color]
-    },
+    (color?: COLOR) => (color ? themes[theme][color] : undefined),
     [theme],
   )
 
@@ -31,6 +34,15 @@ export const ThemeProvider = ({ children }: Props) => {
     () => ({ theme, getColor, setTheme, toggleTheme }),
     [theme, getColor, toggleTheme],
   )
+
+  useEffect(() => {
+    setTheme(colorPreference === ColorPreference.LIGHT ? THEME.LIGHT : THEME.DARK)
+  }, [colorPreference])
+
+  useEffect(() => {
+    const backgroundColor = getColor(COLOR.PRIMARY)
+    if (backgroundColor) document.body.style.backgroundColor = backgroundColor
+  }, [getColor])
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
 }
