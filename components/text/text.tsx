@@ -2,28 +2,21 @@ import React, { CSSProperties, memo } from 'react'
 import { Children } from '../../utils'
 import { COLOR, useTheme } from '../theme'
 
-const FONT_SIZE = {
-  small: 12,
-  normal: 16,
-  large: 20,
-  'x-large': 24,
-}
-
-interface Props {
+export interface TextProps {
   children: string | Children
-  size?: keyof typeof FONT_SIZE
-  fontFamily?: 'Poppins' | 'Rounded Mplus 1c'
+  fontSize?: number
+  fontFamily?: 'Poppins' | 'M PLUS Rounded 1c'
   thin?: boolean
   color?: COLOR
 }
 
 export const Text = memo(
-  ({ size = 'normal', children, fontFamily, thin, color = COLOR.SECONDARY }: Props) => {
+  ({ fontSize, children, fontFamily, thin, color = COLOR.SECONDARY }: TextProps) => {
     const { getColor } = useTheme()
 
     const styles: CSSProperties = {
-      fontSize: FONT_SIZE[size],
-      fontFamily,
+      fontSize,
+      fontFamily: fontFamily ? `"${fontFamily}"` : undefined,
       fontWeight: thin ? '200' : undefined,
       color: getColor(color),
     }
