@@ -5,8 +5,9 @@ import Image from 'next/image'
 
 export function AboutMe() {
   return (
-    <Section title="About Me">
-      <Stack horizontal fill>
+    <Section title='About Me'>
+      <Spacer size='normal' l='none' />
+      <Stack horizontal='l' fill>
         <Stack fill className='relative'>
           <Image
             layout='fill'
@@ -17,8 +18,8 @@ export function AboutMe() {
             priority
           />
         </Stack>
-        <Stack fill verticalAlign='middle'>
-          <Text italic thin fontSize={24} lineHeight={1.2}>
+        <Stack fill='l' verticalAlign='middle' padding='x-large'>
+          <Text italic thin fontSize={24} lineHeight={1.2} center left='l'>
             Vikalp is a Software Engineer with 3+ years of experience.
             <Spacer />
             He’s always a learners. — Thirsty for new tech solutions and eager to use them

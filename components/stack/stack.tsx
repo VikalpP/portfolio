@@ -1,11 +1,12 @@
 import React, { CSSProperties, memo, ReactNode } from 'react'
-import { getMaxWidth, getPadding, MaxWidth, Padding } from './styles'
+import { BreakPoints } from '../../utils'
+import { getMaxWidth, getMinWidth, getPadding, MaxWidth, MinWidth, Padding } from './styles'
 
 interface Props {
   children?: ReactNode | ReactNode[]
-  horizontal?: boolean
-  fill?: boolean
-  fillHorizontal?: boolean
+  horizontal?: boolean | BreakPoints
+  fill?: boolean | BreakPoints
+  fillHorizontal?: boolean | BreakPoints
   verticalAlign?: 'middle' | 'bottom'
   horizontalAlign?: 'center' | 'end'
   padding?: Padding
@@ -13,6 +14,7 @@ interface Props {
   className?: string
   opacity?: number
   maxWidth?: MaxWidth
+  minWidth?: MinWidth
 }
 
 export const Stack = memo(
@@ -28,6 +30,7 @@ export const Stack = memo(
     className,
     opacity,
     maxWidth,
+    minWidth,
   }: Props) => {
     const containerStyle: CSSProperties = {
       padding: getPadding(padding),
@@ -37,8 +40,13 @@ export const Stack = memo(
 
     const classes = [
       'flex',
-      horizontal ? 'flex-row' : 'flex-column',
-      fill ? 'w-100 flex-auto' : fillHorizontal ? 'w-100' : '',
+      typeof horizontal === 'boolean' ? 'flex-row' : 'flex-column',
+      typeof horizontal === 'string' ? `flex-row-${horizontal}` : '',
+      typeof fill === 'boolean' ? 'w-100 flex-auto' : '',
+      typeof fill === 'string' ? `w-100-${fill} flex-auto-${fill}` : '',
+      typeof fillHorizontal === 'boolean' ? 'w-100' : '',
+      typeof fillHorizontal === 'string' ? `w-100-${fillHorizontal}` : '',
+
       verticalAlign === 'middle'
         ? horizontal
           ? 'items-center'
@@ -58,6 +66,7 @@ export const Stack = memo(
           : 'items-end'
         : '',
       maxWidth ? getMaxWidth(maxWidth) : '',
+      minWidth ? getMinWidth(minWidth) : '',
       className,
     ].join(' ')
 

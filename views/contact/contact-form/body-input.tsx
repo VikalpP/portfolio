@@ -25,7 +25,7 @@ export function BodyInput({ onChange, submitDisabled }: Props) {
             <Dash />
           </Stack>
         </Stack>
-        <Spacer size='large' />
+        <Spacer l='large' />
         <Stack fillHorizontal maxWidth='small'>
           <TextArea rows={10} resizeAsYouType onChange={onChange} />
           <Spacer />

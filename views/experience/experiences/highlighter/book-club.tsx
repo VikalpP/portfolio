@@ -7,12 +7,12 @@ export function BookClub() {
       <Text fontSize={16}>Highlighter (Book Club)</Text>
 
       <Spacer size='small' />
-      <Text thin fontSize={12} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5}>
         A react-native based iOS application that allows book readers to highlight good quotes from
         the book and share them in the book clubs.
       </Text>
 
-      <Text thin fontSize={12} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5}>
         <ul className='pl3'>
           <li>
             Tweaked text highlighting algorithm for intelligent and intuitive highlighting, which

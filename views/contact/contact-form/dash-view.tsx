@@ -5,10 +5,8 @@ export const Dash = memo(() => {
   const { getColor } = useTheme()
   return (
     <div
-      className='ba br-pill'
+      className='ba br-pill w3_5-l w2'
       style={{
-        minWidth: 80,
-        width: 80,
         height: 0,
         opacity: 0.7,
         borderColor: getColor(COLOR.SECONDARY),

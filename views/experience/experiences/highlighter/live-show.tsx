@@ -7,12 +7,12 @@ export function LiveShow() {
       <Text fontSize={16}>Highlighter (Live Show)</Text>
 
       <Spacer size='small' />
-      <Text thin fontSize={12} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5}>
         An online platform for creators to host their live events/shows and allow people to create
         &amp; share video highlights from it.
       </Text>
 
-      <Text thin fontSize={12} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5}>
         <ul className='pl3'>
           <li>Developed the POC to introduce interactive live events over a weekend.</li>
           <li>

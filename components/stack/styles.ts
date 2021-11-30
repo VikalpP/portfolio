@@ -18,7 +18,7 @@ export const getPadding = (padding?: Padding) => {
 }
 
 const MAX_WIDTH = {
-  'x-large': 'mw8_5',
+  'x-large': 'mw9',
   large: 'mw8',
   normal: 'mw7',
   small: 'mw6',
@@ -28,3 +28,15 @@ const MAX_WIDTH = {
 
 export type MaxWidth = keyof typeof MAX_WIDTH
 export const getMaxWidth = (maxWidth: MaxWidth) => MAX_WIDTH[maxWidth]
+
+const MIN_WIDTH = {
+  'x-large': 'min-width-9',
+  large: 'min-width-8',
+  normal: 'min-width-7',
+  small: 'min-width-6',
+  'x-small': 'min-width-5',
+  none: '',
+}
+
+export type MinWidth = keyof typeof MIN_WIDTH
+export const getMinWidth = (minWidth: MinWidth) => MIN_WIDTH[minWidth]

@@ -19,7 +19,7 @@ export function SubjectInput({ onChange }: Props) {
         </Text>
         <Spacer />
         <Dash />
-        <Spacer size='large' />
+        <Spacer l='large' />
         <TextInput fontSize={24} resizeAsYouType onChange={onChange} />
       </Stack>
     </label>

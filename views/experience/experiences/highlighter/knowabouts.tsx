@@ -7,12 +7,12 @@ export function Knowabouts() {
       <Text fontSize={16}>Knowabouts</Text>
 
       <Spacer size='small' />
-      <Text thin fontSize={12} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5}>
         An innovative “inverse social media” platform where your known ones create your profile by
         sharing what they “Know about” you.
       </Text>
 
-      <Text thin fontSize={12} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5}>
         <ul className='pl3'>
           <li>
             Worked in a distributed system with 15+ micro-services build around GraphQL federation

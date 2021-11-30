@@ -21,8 +21,10 @@ export function Experience() {
   const [selectedExperience, setSelectedExperience] = useState<ExperienceType>(experiences[0].key)
   return (
     <Section title='Experience'>
-      <Stack fill padding='none x-large' horizontalAlign='center'>
-        <Stack className='relative' horizontal fill maxWidth='normal' padding='none x-large'>
+      <Stack fill padding='none large' horizontalAlign='center'>
+        <Stack className='relative' horizontal fill maxWidth='normal' padding='none large'>
+          <Spacer size='none' l='normal' />
+
           <div className='flex flex-column' style={{ minWidth: 160 }}>
             <Spacer size='x-large' />
             <Selector items={experiences} onSelect={setSelectedExperience} />
@@ -32,9 +34,11 @@ export function Experience() {
             <Spacer size='x-large' />
             <ExperienceDetails selectedExperience={selectedExperience} />
             <Spacer size='x-large' />
-            <FadingOverlay className='w-100 h4 absolute top-0' />
-            <FadingOverlay className='w-100 h4 absolute bottom-0 rotate-180' />
+            <FadingOverlay side='top' className='w-100 h4 absolute top-0' />
+            <FadingOverlay side='bottom' className='w-100 h4 absolute bottom-0' />
           </Stack>
+
+          <Spacer size='none' l='normal' />
         </Stack>
       </Stack>
     </Section>

@@ -10,6 +10,8 @@ export function Skills() {
       <Spacer size='large' />
       <Spacer size='normal' />
       <Stack fill className='relative overflow-hidden' padding='none x-large'>
+        <Spacer size='large' l='none' />
+
         <Carousel>
           <img className={imageClassName} src='/images/html.png' alt='HTML' />
           <img className={imageClassName} src='/images/react.png' alt='React' />
@@ -18,7 +20,7 @@ export function Skills() {
           <img className={imageClassName} src='/images/apollo.png' alt='Apollo GraphQL' />
           <img className={imageClassName} src='/images/razzel.png' alt='Razzel' />
         </Carousel>
-        <Spacer size='large' />
+        <Spacer size='x-large' l='large' />
 
         <Carousel>
           <img className={imageClassName} src='/images/css.png' alt='CSS' />
@@ -28,7 +30,7 @@ export function Skills() {
           <img className={imageClassName} src='/images/nodejs.png' alt='Node JS' />
           <img className={imageClassName} src='/images/ffmpeg.png' alt='FFmpeg' />
         </Carousel>
-        <Spacer size='large' />
+        <Spacer size='x-large' l='large' />
 
         <Carousel>
           <img className={imageClassName} src='/images/javascript.png' alt='JavaScript' />
@@ -40,14 +42,8 @@ export function Skills() {
         </Carousel>
         <Spacer size='x-large' />
 
-        <FadingOverlay
-          className='absolute left-0 h5 w-100'
-          style={{ transform: 'rotate(-90deg) translateX(-100%)', transformOrigin: 'top left' }}
-        />
-        <FadingOverlay
-          className='absolute right-0 h5 w-100'
-          style={{ transform: 'rotate(90deg) translateX(100%)', transformOrigin: 'top right' }}
-        />
+        <FadingOverlay side='left' className='absolute left-0 h-100 w5' />
+        <FadingOverlay side='right' className='absolute right-0 h-100 w5' />
       </Stack>
       <Spacer size='normal' />
     </Section>

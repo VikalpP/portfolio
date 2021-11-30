@@ -18,12 +18,12 @@ export function OpenSourceExperience() {
       </Text>
 
       <Spacer />
-      <Text thin fontSize={12} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5}>
         CodeceptJS is a NodeJS testing framework for E2E testing. It abstracts browser interaction
         into simple steps which are written from a user perspective.
       </Text>
 
-      <Text thin fontSize={12} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5}>
         <ul className='pl3'>
           <li>Worked on a large codebase in a fully distributed team.</li>
           <li>Implemented feature to mock HTTP requests.</li>

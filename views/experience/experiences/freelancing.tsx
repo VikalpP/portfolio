@@ -18,11 +18,11 @@ export function FreelancingExperience() {
       </Text>
 
       <Spacer />
-      <Text thin fontSize={12} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5}>
         My Photos - An android app to organize user’s photos, videos &amp; albums.
       </Text>
 
-      <Text thin fontSize={12} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5}>
         <ul className='pl3'>
           <li>
             Designed and developed UI/UX for the application in{' '}

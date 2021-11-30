@@ -13,7 +13,7 @@ export function Section({ title, children, safeArea = true }: Props) {
     <Stack
       horizontal
       style={{ scrollSnapAlign: 'start' }}
-      className={`pt6 ${safeArea ? 'ph5' : ''} vh-100 relative overflow-hidden`}
+      className={`pt6 ${safeArea ? 'ph5-l ph4 ' : ''} vh-100 relative overflow-hidden`}
     >
       {children}
       {title ? <PageTitle>{title}</PageTitle> : null}

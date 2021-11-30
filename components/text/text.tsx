@@ -1,5 +1,5 @@
 import React, { CSSProperties, memo } from 'react'
-import { Children } from '../../utils'
+import { BreakPoints, Children } from '../../utils'
 import { COLOR, useTheme } from '../theme'
 
 export interface TextProps {
@@ -12,6 +12,8 @@ export interface TextProps {
   color?: COLOR
   className?: string
   style?: CSSProperties
+  center?: boolean | BreakPoints
+  left?: boolean | BreakPoints
 }
 
 export const Text = memo(
@@ -24,6 +26,8 @@ export const Text = memo(
     lineHeight,
     className,
     style,
+    center,
+    left,
     color = COLOR.SECONDARY,
   }: TextProps) => {
     const { getColor } = useTheme()
@@ -38,8 +42,14 @@ export const Text = memo(
       ...style,
     }
 
+    const classes = [
+      typeof center === 'boolean' ? 'tc' : typeof center === 'string' ? `tc-${center}` : '',
+      typeof left === 'boolean' ? 'tc' : typeof left === 'string' ? `tc-${left}` : '',
+      className,
+    ].join(' ')
+
     return (
-      <span className={className} style={styles}>
+      <span className={classes} style={styles}>
         {children}
       </span>
     )

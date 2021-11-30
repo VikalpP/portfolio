@@ -18,11 +18,11 @@ export function MJInfotechExperience() {
       </Text>
 
       <Spacer />
-      <Text thin fontSize={12} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5}>
         MJ Infotech is a mobile app development company.
       </Text>
 
-      <Text thin fontSize={12} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5}>
         <ul className='pl3'>
           <li>
             Increased company revenues by 10% by implementing a REST API using{' '}
@@ -33,7 +33,7 @@ export function MJInfotechExperience() {
       </Text>
 
       <Spacer size='small' />
-      <Text thin fontSize={12} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5}>
         <ExternalLink url='https://play.google.com/store/apps/details?id=om.photogallery.gallery'>
           Gallery
         </ExternalLink>{' '}
@@ -41,7 +41,7 @@ export function MJInfotechExperience() {
         installs and a 4.4 star rating across 1,700+ reviews.
       </Text>
 
-      <Text thin fontSize={12} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5}>
         <ul className='pl3'>
           <li>
             Designed and developed the entire application from scratch in{' '}
