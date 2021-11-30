@@ -40,7 +40,7 @@ export const TextInput = memo(({ fontSize, resizeAsYouType, onChange }: Props) =
     <input
       ref={ref}
       style={style}
-      className='br3 pa3 outline-0 mw-100'
+      className='br3 pa3 outline-0 ba mw-100'
       type='text'
       onChange={handleOnChange}
     />

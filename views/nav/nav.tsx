@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button, COLOR, Logo, Spacer, Stack, Text } from '../../components'
-import DownloadIcon from './download.svg'
+import { Logo, Spacer, Stack, Text } from '../../components'
+import { Resume } from './resume'
 
 export function Nav() {
   return (
@@ -33,19 +33,7 @@ export function Nav() {
         </Stack>
 
         <Spacer size='small' fill />
-        <a
-          download
-          href='https://drive.google.com/uc?id=1cYWnjTmIAu4E8Ioq9dqEhzDwFAhMlFbJ&export=download'
-        >
-          <Button theme={COLOR.ACCENT} rounded>
-            <DownloadIcon />
-            <Spacer size='x-small' />
-            <Text color={COLOR.PRIMARY} fontSize={16}>
-              Resume
-            </Text>
-          </Button>
-        </a>
-
+        <Resume />
         <Spacer size='none' l='normal' />
       </Stack>
     </header>

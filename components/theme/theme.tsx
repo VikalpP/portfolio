@@ -17,9 +17,7 @@ interface Props {
 
 export const ThemeProvider = ({ children }: Props) => {
   const colorPreference = useColorScheme()
-  const [theme, setTheme] = useState<THEME>(
-    colorPreference === ColorPreference.LIGHT ? THEME.LIGHT : THEME.DARK,
-  )
+  const [theme, setTheme] = useState<THEME>(THEME.DARK)
 
   const toggleTheme = useCallback(() => {
     setTheme(currentTheme => (currentTheme === THEME.LIGHT ? THEME.DARK : THEME.LIGHT))

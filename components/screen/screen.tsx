@@ -8,8 +8,8 @@ interface Props {
 
 export const Screen = memo(({ children }: Props) => {
   const ref = useScrollRetention()
+
   const styles: CSSProperties = {
-    background: '#000',
     width: '100%',
     height: '100vh',
     scrollSnapType: 'y mandatory',
