@@ -7,11 +7,8 @@ const VerticalLine = memo(() => {
   const { getColor } = useTheme()
   return (
     <div
-      className='ba br-pill'
+      className='ba br-pill h5-ns w0-ns w4 h0'
       style={{
-        minHeight: 160,
-        width: 0,
-        height: 80,
         opacity: 0.5,
         borderColor: getColor(COLOR.SECONDARY),
       }}
@@ -24,7 +21,7 @@ VerticalLine.displayName = 'VerticalLine'
 export function Footer() {
   return (
     <footer>
-      <Stack fillHorizontal horizontalAlign='end'>
+      <Stack className='flex-row flex-column-ns' fillHorizontal horizontalAlign='end'>
         <ExternalLink color={COLOR.SECONDARY} url='https://github.com/VikalpP'>
           <GithubIcon />
         </ExternalLink>

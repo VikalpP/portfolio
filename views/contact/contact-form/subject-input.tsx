@@ -13,13 +13,17 @@ const styles: Record<string, CSSProperties> = {
 export function SubjectInput({ onChange }: Props) {
   return (
     <label>
-      <Stack horizontal verticalAlign='middle'>
+      <Stack horizontal='ns' verticalAlign='middle'>
         <Text fontSize={18} style={styles.title}>
           Subject
         </Text>
-        <Spacer />
-        <Dash />
-        <Spacer l='large' />
+
+        <Spacer size='small' ns='normal' />
+        <Stack horizontal verticalAlign='middle' visible='ns' hidden>
+          <Dash />
+          <Spacer l='large' />
+        </Stack>
+
         <TextInput fontSize={24} resizeAsYouType onChange={onChange} />
       </Stack>
     </label>

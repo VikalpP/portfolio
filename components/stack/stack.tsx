@@ -15,6 +15,8 @@ interface Props {
   opacity?: number
   maxWidth?: MaxWidth
   minWidth?: MinWidth
+  hidden?: boolean | BreakPoints
+  visible?: boolean | BreakPoints
 }
 
 export const Stack = memo(
@@ -31,6 +33,8 @@ export const Stack = memo(
     opacity,
     maxWidth,
     minWidth,
+    hidden,
+    visible,
   }: Props) => {
     const containerStyle: CSSProperties = {
       padding: getPadding(padding),
@@ -46,23 +50,25 @@ export const Stack = memo(
       typeof fill === 'string' ? `w-100-${fill} flex-auto-${fill}` : '',
       typeof fillHorizontal === 'boolean' ? 'w-100' : '',
       typeof fillHorizontal === 'string' ? `w-100-${fillHorizontal}` : '',
+      hidden ? `dn${hidden === true ? '' : `-${hidden}`}` : '',
+      typeof visible === 'string' ? `flex-${visible}` : '',
 
       verticalAlign === 'middle'
         ? horizontal
-          ? 'items-center'
+          ? `items-center${horizontal === true ? '' : `-${horizontal}`}`
           : 'justify-center'
         : verticalAlign === 'bottom'
         ? horizontal
-          ? 'items-end'
+          ? `items-end${horizontal === true ? '' : `-${horizontal} justify-end`}`
           : 'justify-end'
         : '',
       horizontalAlign === 'center'
         ? horizontal
-          ? 'justify-center'
+          ? `justify-center${horizontal === true ? '' : `-${horizontal} items-center`}`
           : 'items-center'
         : horizontalAlign === 'end'
         ? horizontal
-          ? 'justify-end'
+          ? `justify-end${horizontal === true ? '' : `-${horizontal} items-end`}`
           : 'items-end'
         : '',
       maxWidth ? getMaxWidth(maxWidth) : '',

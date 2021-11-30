@@ -18,17 +18,23 @@ export function AboutMe() {
             priority
           />
         </Stack>
-        <Stack fill='l' verticalAlign='middle' padding='x-large'>
-          <Text italic thin fontSize={24} lineHeight={1.2} center left='l'>
-            Vikalp is a Software Engineer with 3+ years of experience.
-            <Spacer />
-            He’s always a learners. — Thirsty for new tech solutions and eager to use them
-            optimally.
-            <Spacer />
-            He loves discussing clean code and solving problems.
-            <Spacer />
-            When not coding, you will find him at the gym or binge-watching.
-          </Text>
+        <Stack fill='l' horizontal verticalAlign='middle' padding='large none'>
+          <Spacer size='none' ns='normal' />
+
+          <Stack fillHorizontal>
+            <Text italic thin className='f3-ns f4' lineHeight={1.2} left='l' center='m' right>
+              Vikalp is a Software Engineer with 3+ years of experience.
+              <Spacer size='small' l='normal' />
+              He’s always a learners. — Thirsty for new tech solutions and eager to use them
+              optimally.
+              <Spacer size='small' l='normal' />
+              He loves discussing clean code and solving problems.
+              <Spacer size='small' l='normal' />
+              When not coding, you will find him at the gym or binge-watching.
+            </Text>
+          </Stack>
+
+          <Spacer size='none' ns='normal' />
         </Stack>
       </Stack>
     </Section>

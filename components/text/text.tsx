@@ -14,6 +14,8 @@ export interface TextProps {
   style?: CSSProperties
   center?: boolean | BreakPoints
   left?: boolean | BreakPoints
+  right?: boolean | BreakPoints
+
 }
 
 export const Text = memo(
@@ -28,6 +30,7 @@ export const Text = memo(
     style,
     center,
     left,
+    right,
     color = COLOR.SECONDARY,
   }: TextProps) => {
     const { getColor } = useTheme()
@@ -44,7 +47,8 @@ export const Text = memo(
 
     const classes = [
       typeof center === 'boolean' ? 'tc' : typeof center === 'string' ? `tc-${center}` : '',
-      typeof left === 'boolean' ? 'tc' : typeof left === 'string' ? `tc-${left}` : '',
+      typeof left === 'boolean' ? 'tl' : typeof left === 'string' ? `tl-${left}` : '',
+      typeof right === 'boolean' ? 'tr' : typeof right === 'string' ? `tr-${right}` : '',
       className,
     ].join(' ')
 

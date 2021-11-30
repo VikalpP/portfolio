@@ -4,13 +4,13 @@ import { Carousel, FadingOverlay, Spacer, Stack } from '../../components'
 import { Section } from '../section'
 
 export function Skills() {
-  const imageClassName = 'h-100 object-fit-contain br5'
+  const imageClassName = 'h-100 object-fit-contain br5-l br4-m br3'
   return (
     <Section title='Skills' safeArea={false}>
-      <Spacer size='large' />
-      <Spacer size='normal' />
+      <Spacer size='none' ns='large' />
+      <Spacer size='none' ns='normal' />
       <Stack fill className='relative overflow-hidden' padding='none x-large'>
-        <Spacer size='large' l='none' />
+        <Spacer size='none' ns='large' />
 
         <Carousel>
           <img className={imageClassName} src='/images/html.png' alt='HTML' />
@@ -42,10 +42,10 @@ export function Skills() {
         </Carousel>
         <Spacer size='x-large' />
 
-        <FadingOverlay side='left' className='absolute left-0 h-100 w5' />
-        <FadingOverlay side='right' className='absolute right-0 h-100 w5' />
+        <FadingOverlay side='left' className='absolute left-0 h-100 w5-ns w4' />
+        <FadingOverlay side='right' className='absolute right-0 h-100 w5-ns w4' />
       </Stack>
-      <Spacer size='normal' />
+      <Spacer size='none' ns='normal' />
     </Section>
   )
 }

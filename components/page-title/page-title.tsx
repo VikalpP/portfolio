@@ -1,4 +1,5 @@
 import React, { CSSProperties, memo } from 'react'
+import styles from './page-title.module.css'
 
 interface Props {
   children: string
@@ -7,14 +8,10 @@ interface Props {
 export const PageTitle = memo(({ children }: Props) => {
   const style: CSSProperties = {
     color: '#aaaaaa40',
-    top: '50%',
     fontFamily: 'Righteous',
-    fontSize: 80,
-    transformOrigin: '0 0',
-    transform: 'rotate(270deg) translateX(-50%)',
   }
   return (
-    <span className='rotate-270 absolute left-1' style={style}>
+    <span className={`absolute left-1 ${styles.pageTitle}`} style={style}>
       {children}
     </span>
   )

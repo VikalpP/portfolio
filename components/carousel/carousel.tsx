@@ -11,7 +11,7 @@ export function Carousel({ children }: Props) {
     <div className='flex flex-auto relative'>
       <div
         className={`absolute top-0 left-0 h-100 flex ${styles.slideshow}`}
-        style={{ width: 'max-content' }}
+        style={{ width: 'max-content', maxHeight: 192 }}
       >
         {children}
         {children}

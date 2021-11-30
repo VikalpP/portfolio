@@ -1,0 +1,16 @@
+.pageTitle {
+  transform-origin: 0 0;
+  font-size: 36px;
+  transform: rotate(270deg);
+  top: 95%;
+  left: 4px;
+}
+
+/* non-small devices */
+@media screen and (min-width: 30em) {
+  .pageTitle {
+    top: 50%;
+    font-size: 80px;
+    transform: rotate(270deg) translateX(-50%);
+  }
+}

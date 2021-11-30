@@ -9,15 +9,23 @@ export function Contact() {
     <Section title='Contact'>
       <Spacer size='normal' />
 
-      <Stack fill horizontalAlign='center' padding='x-large'>
-        <Stack fill maxWidth='large'>
-          <Text fontSize={48} fontFamily='Righteous'>{`Let's Connect`}</Text>
-          <Spacer size='large' />
-          <ContactForm />
-        </Stack>
-      </Stack>
+      <Stack fill horizontal='ns'>
+        <Spacer size='none' ns='large' />
 
-      <Footer />
+        <Stack fill horizontalAlign='center' padding='normal none'>
+          <Spacer size='none' ns='normal' />
+
+          <Stack fill maxWidth='large'>
+            <Text className='f1-ns f2_5' fontFamily='Righteous'>{`Let's Connect`}</Text>
+            <Spacer ns='large' />
+            <ContactForm />
+          </Stack>
+        </Stack>
+        <Spacer size='small' ns='large' />
+
+        <Footer />
+        <Spacer size='small' ns='none' />
+      </Stack>
     </Section>
   )
 }

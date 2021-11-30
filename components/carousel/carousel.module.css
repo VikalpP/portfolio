@@ -4,11 +4,23 @@
 }
 
 .slideshow > *:not(:last-child) {
-  margin-right: 128px;
+  margin-right: 64px;
 }
 
 @keyframes slideshow {
   100% {
-    transform: translateX(calc(-50% - 64px));
+    transform: translateX(calc(-50% - 32px));
+  }
+}
+
+@media screen and (min-width: 30em) {
+  .slideshow > *:not(:last-child) {
+    margin-right: 128px;
+  }
+
+  @keyframes slideshow {
+    100% {
+      transform: translateX(calc(-50% - 64px));
+    }
   }
 }
