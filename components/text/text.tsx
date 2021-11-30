@@ -15,7 +15,6 @@ export interface TextProps {
   center?: boolean | BreakPoints
   left?: boolean | BreakPoints
   right?: boolean | BreakPoints
-
 }
 
 export const Text = memo(
