@@ -11,7 +11,10 @@ export const PageTitle = memo(({ children }: Props) => {
     fontFamily: 'Righteous',
   }
   return (
-    <span className={`absolute left-1 ${styles.pageTitle}`} style={style}>
+    <span
+      className={`absolute left-1 ${styles.pageTitle} safe-area-from-bottom-padding-left`}
+      style={style}
+    >
       {children}
     </span>
   )
