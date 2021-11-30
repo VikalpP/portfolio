@@ -14,6 +14,7 @@ export function AboutMe() {
             objectPosition='bottom'
             src='/images/my-photo.png'
             alt={`Vikalp's Photo`}
+            priority
           />
         </Stack>
         <Stack fill verticalAlign='middle'>
