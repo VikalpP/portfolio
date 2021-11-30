@@ -29,13 +29,18 @@ export function Nav() {
         </Text>
 
         <Spacer fill />
-        <Button theme={COLOR.ACCENT} rounded>
-          <DownloadIcon />
-          <Spacer size='x-small' />
-          <Text color={COLOR.PRIMARY} fontSize={16}>
-            Resume
-          </Text>
-        </Button>
+        <a
+          download
+          href='https://drive.google.com/uc?id=1cYWnjTmIAu4E8Ioq9dqEhzDwFAhMlFbJ&export=download'
+        >
+          <Button theme={COLOR.ACCENT} rounded>
+            <DownloadIcon />
+            <Spacer size='x-small' />
+            <Text color={COLOR.PRIMARY} fontSize={16}>
+              Resume
+            </Text>
+          </Button>
+        </a>
       </Stack>
     </header>
   )
