@@ -47,7 +47,7 @@ export function Experience() {
             <Selector items={experiences} selectedItem={selectedExperience} onSelect={onSelect} />
           </div>
           <Spacer size='large' />
-          <Stack fillHorizontal className='overflow-y-auto no-scrollbar'>
+          <Stack visible='ns' hidden fillHorizontal className='overflow-y-auto no-scrollbar'>
             <Spacer size='x-large' />
             <ExperienceDetails selectedExperience={selectedExperience} />
             <Spacer size='x-large' />
