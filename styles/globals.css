@@ -67,6 +67,7 @@ li:not(:last-child) {
 
 /* Firefox */
 * {
+  scrollbar-width: thin;
   scrollbar-color: var(--scrollbar-active-scroll) transparent;
 }
 
