@@ -3,7 +3,7 @@ import { COLOR, ExternalLink, Spacer, Stack, Text } from '../../../components'
 
 export function FreelancingExperience() {
   return (
-    <Stack fillHorizontal className='overflow-y-auto'>
+    <Stack fillHorizontal>
       <Stack opacity={0.6}>
         <Text fontSize={12} thin italic>
           FEB 2019 - MAR 2019

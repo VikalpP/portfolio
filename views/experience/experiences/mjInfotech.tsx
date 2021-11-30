@@ -3,7 +3,7 @@ import { COLOR, ExternalLink, Spacer, Stack, Text } from '../../../components'
 
 export function MJInfotechExperience() {
   return (
-    <Stack fillHorizontal className='overflow-y-auto'>
+    <Stack fillHorizontal>
       <Stack opacity={0.6}>
         <Text fontSize={12} thin italic>
           JUL 2018 - JAN 2019
