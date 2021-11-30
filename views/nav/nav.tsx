@@ -1,6 +1,6 @@
 import React from 'react'
-import DownloadIcon from './download.svg'
 import { Button, COLOR, Logo, Spacer, Stack, Text } from '../../components'
+import DownloadIcon from './download.svg'
 
 export function Nav() {
   return (
@@ -13,7 +13,7 @@ export function Nav() {
         <Spacer size='large' />
         <Spacer size='large' />
         <Text fontFamily='Poppins' thin fontSize={16}>
-          +91 86906 50665
+          <a href='sms:+918690650665'>+91 86906 50665</a>
         </Text>
 
         <Spacer size='normal' />
