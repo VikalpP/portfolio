@@ -7,7 +7,7 @@ import { Footer } from './footer'
 export function Contact() {
   return (
     <Section title='Contact'>
-      <Stack fill horizontalAlign='center' padding='large'>
+      <Stack fill horizontalAlign='center' padding='x-large'>
         <Stack fill maxWidth='large'>
           <Text fontSize={48} fontFamily='Righteous'>{`Let's Connect`}</Text>
           <Spacer size='large' />

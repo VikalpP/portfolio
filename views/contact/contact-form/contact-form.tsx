@@ -22,7 +22,7 @@ export function ContactForm() {
   const disabled = !subject || !body
   return (
     <Stack fill>
-      <form onSubmit={sendMail}>
+      <form className='flex w-100 flex-column flex-auto' onSubmit={sendMail}>
         <SubjectInput onChange={setSubject} />
         <Spacer />
         <BodyInput onChange={setBody} submitDisabled={disabled} />
