@@ -24,9 +24,6 @@ export function AboutMe() {
             He’s always a learners. — Thirsty for new tech solutions and eager to use them
             optimally.
             <Spacer />
-            He believes in making a big impact by working at a small company, instead of making no
-            impact working at big one.
-            <Spacer />
             He loves discussing clean code and solving problems.
             <Spacer />
             When not coding, you will find him at the gym or binge-watching.
