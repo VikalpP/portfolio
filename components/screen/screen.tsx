@@ -9,9 +9,14 @@ export const Screen = memo(({ children }: Props) => {
   const styles: CSSProperties = {
     background: '#000',
     width: '100%',
-    minHeight: '100vh',
+    height: '100vh',
+    scrollSnapType: 'y mandatory',
   }
-  return <div style={styles}>{children}</div>
+  return (
+    <div className='overflow-auto' style={styles}>
+      {children}
+    </div>
+  )
 })
 
 Screen.displayName = 'Screen'
