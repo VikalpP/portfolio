@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
+import { useRouter } from 'next/router'
+import React, { useCallback } from 'react'
+import createPersistedState from 'use-persisted-state'
 import { FadingOverlay, Selector, Spacer, Stack } from '../../components'
+import { isSmallDevice } from '../../utils'
 import { Section } from '../section'
 import { ExperienceDetails } from './experience-details'
 
+const useSelectedExperienceState = createPersistedState('selectedExperience')
+
 export enum ExperienceType {
-  Highlighter,
-  OpenSource,
-  FreeLancing,
-  MJInfotech,
+  Highlighter = 'Highlighter',
+  OpenSource = 'OpenSource',
+  FreeLancing = 'FreeLancing',
+  MJInfotech = 'MJInfotech',
 }
 
 const experiences = [
@@ -18,7 +23,19 @@ const experiences = [
 ]
 
 export function Experience() {
-  const [selectedExperience, setSelectedExperience] = useState<ExperienceType>(experiences[0].key)
+  const { push } = useRouter()
+  const [selectedExperience, setSelectedExperience] = useSelectedExperienceState<ExperienceType>(
+    experiences[0].key,
+  )
+
+  const onSelect = useCallback(
+    (key: ExperienceType) => {
+      setSelectedExperience(key)
+      if (isSmallDevice()) push(`/experience/${key}`)
+    },
+    [push, setSelectedExperience],
+  )
+
   return (
     <Section title='Experience'>
       <Stack fill padding='none large' horizontalAlign='center'>
@@ -27,7 +44,7 @@ export function Experience() {
 
           <div className='flex flex-column' style={{ minWidth: 160 }}>
             <Spacer size='x-large' />
-            <Selector items={experiences} onSelect={setSelectedExperience} />
+            <Selector items={experiences} selectedItem={selectedExperience} onSelect={onSelect} />
           </div>
           <Spacer size='large' />
           <Stack fillHorizontal className='overflow-y-auto no-scrollbar'>

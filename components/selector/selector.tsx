@@ -5,11 +5,14 @@ type Item<T> = { key: T; title: string }
 
 interface Props<T> {
   items: Item<T>[]
+  selectedItem?: T
   onSelect?: (key: T) => void
 }
 
-export function Selector<T>({ items, onSelect }: Props<T>) {
-  const [selectedIndex, setSelectedIndex] = useState(0)
+export function Selector<T>({ items, selectedItem, onSelect }: Props<T>) {
+  const [selectedIndex, setSelectedIndex] = useState(
+    (selectedItem && items.findIndex(i => i.key === selectedItem)) || 0,
+  )
   const { getColor } = useTheme()
 
   const selectedTextStyle: CSSProperties = useMemo(

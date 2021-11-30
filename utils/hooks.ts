@@ -9,3 +9,13 @@ export const usePrevNext = (min: number, max: number) => {
 }
 
 export const useIsomorphicLayoutEffect = isBrowser ? useLayoutEffect : useEffect
+
+const getWindowSize = () => ({
+  width: isBrowser ? document.body.clientWidth : 0,
+  height: isBrowser ? document.body.clientHeight : 0,
+})
+
+export function isSmallDevice(): boolean {
+  const { width } = getWindowSize()
+  return width < 480
+}
