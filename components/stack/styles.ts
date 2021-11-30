@@ -22,7 +22,7 @@ const MAX_WIDTH = {
   large: 'mw8',
   normal: 'mw7',
   small: 'mw6',
-  'x-small': 'mw4',
+  'x-small': 'mw5',
   none: '',
 }
 

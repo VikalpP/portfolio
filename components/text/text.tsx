@@ -5,11 +5,13 @@ import { COLOR, useTheme } from '../theme'
 export interface TextProps {
   children: string | Children
   fontSize?: number
-  fontFamily?: 'Poppins' | 'M PLUS Rounded 1c' | 'Roboto'
+  fontFamily?: 'Poppins' | 'M PLUS Rounded 1c' | 'Righteous'
   thin?: boolean
   italic?: boolean
   lineHeight?: number
   color?: COLOR
+  className?: string
+  style?: CSSProperties
 }
 
 export const Text = memo(
@@ -20,6 +22,8 @@ export const Text = memo(
     fontFamily,
     thin,
     lineHeight,
+    className,
+    style,
     color = COLOR.SECONDARY,
   }: TextProps) => {
     const { getColor } = useTheme()
@@ -31,9 +35,14 @@ export const Text = memo(
       color: getColor(color),
       fontStyle: italic ? 'italic' : undefined,
       lineHeight,
+      ...style,
     }
 
-    return <span style={styles}>{children}</span>
+    return (
+      <span className={className} style={styles}>
+        {children}
+      </span>
+    )
   },
 )
 

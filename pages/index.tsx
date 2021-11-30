@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { Screen } from '../components'
-import { AboutMe, Experience, Intro, Nav, Skills } from '../views'
+import { AboutMe, Contact, Experience, Intro, Nav, Skills } from '../views'
 
 const Home: NextPage = () => {
   return (
@@ -10,6 +10,7 @@ const Home: NextPage = () => {
       <AboutMe />
       <Experience />
       <Skills />
+      <Contact />
     </Screen>
   )
 }

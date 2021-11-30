@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { TextProps, Text } from '../text'
+import React, { memo, useEffect, useState } from 'react'
+import { Text, TextProps } from '../text'
 
 interface Props extends TextProps {
   children: string[]
 }
 
-export function TextSwapping({ children: words, ...textProps }: Props) {
+export const TextSwapping = memo(({ children: words, ...textProps }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const wordsCount = words.length
 
@@ -53,4 +53,6 @@ export function TextSwapping({ children: words, ...textProps }: Props) {
       ))}
     </div>
   )
-}
+})
+
+TextSwapping.displayName = 'TextSwapping'
