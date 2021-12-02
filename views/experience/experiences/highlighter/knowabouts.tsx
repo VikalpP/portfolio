@@ -12,7 +12,7 @@ export function Knowabouts() {
         sharing what they “Know about” you.
       </Text>
 
-      <Text thin fontSize={14} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>
         <ul className='pl3'>
           <li>
             Worked in a distributed system with 15+ micro-services build around GraphQL federation
