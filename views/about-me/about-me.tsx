@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export function AboutMe() {
   return (
-    <Section title='About Me'>
+    <Section title='About'>
       <Spacer size='normal' l='none' />
       <Stack horizontal='l' fill>
         <Stack fill className='relative'>
