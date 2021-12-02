@@ -1,11 +1,46 @@
-/* eslint-disable @next/next/no-img-element */
-import React, { CSSProperties } from 'react'
+import React from 'react'
 import { Carousel, FadingOverlay, Spacer, Stack, THEME, useTheme } from '../../components'
 import { Section } from '../section'
+import { SkillImage } from './skill-image'
 
 export function Skills() {
   const { theme } = useTheme()
-  const imageClassName = 'h-100 object-fit-contain br5-l br4-m br3'
+
+  const skills1 = [
+    { src: '/images/html.png', alt: 'HTML', width: 640, height: 640 },
+    { src: '/images/react.png', alt: 'React', width: 244, height: 244 },
+    { src: '/images/storybook.png', alt: 'StoryBook', width: 2082, height: 495 },
+    { src: '/images/sass.png', alt: 'SASS', width: 664, height: 408 },
+    {
+      src: theme === THEME.LIGHT ? '/images/apollo-light.png' : '/images/apollo.png',
+      alt: 'HTML',
+      width: 1024,
+      height: 351,
+    },
+    { src: '/images/razzel.png', alt: 'Razzel', width: 646, height: 180 },
+  ]
+  const skills2 = [
+    { src: '/images/css.png', alt: 'CSS', width: 640, height: 640 },
+    {
+      src: theme === THEME.LIGHT ? '/images/webpack-light.png' : '/images/webpack.png',
+      alt: 'Webpack',
+      width: 3916,
+      height: 1524,
+    },
+    { src: '/images/graphql.png', alt: 'GraphQL', width: 652, height: 248 },
+    { src: '/images/typegraphql.png', alt: 'TypeGraphQL', width: 1058, height: 772 },
+    { src: '/images/nodejs.png', alt: 'Node JS', width: 668, height: 408 },
+    { src: '/images/ffmpeg.png', alt: 'FFmpeg', width: 876, height: 280 },
+  ]
+  const skills3 = [
+    { src: '/images/javascript.png', alt: 'JavaScript', width: 504, height: 504 },
+    { src: '/images/typescript.png', alt: 'TypeScript', width: 432, height: 432 },
+    { src: '/images/socket.png', alt: 'Socket.IO', width: 530, height: 194 },
+    { src: '/images/babel.png', alt: 'Babel', width: 904, height: 432 },
+    { src: '/images/github.png', alt: 'GitHub', width: 288, height: 288 },
+    { src: '/images/expressjs.png', alt: 'Express JS', width: 535, height: 216 },
+  ]
+
   return (
     <Section title='Skills' safeArea={false}>
       <Spacer size='none' ns='large' />
@@ -14,41 +49,23 @@ export function Skills() {
         <Spacer size='none' ns='large' />
 
         <Carousel>
-          <img className={imageClassName} src='/images/html.png' alt='HTML' />
-          <img className={imageClassName} src='/images/react.png' alt='React' />
-          <img className={imageClassName} src='/images/storybook.png' alt='StoryBook' />
-          <img className={imageClassName} src='/images/sass.png' alt='SASS' />
-
-          <img
-            className={imageClassName}
-            src={`/images/apollo${theme === THEME.LIGHT ? '-light' : ''}.png`}
-            alt='Apollo GraphQL'
-          />
-          <img className={imageClassName} src='/images/razzel.png' alt='Razzel' />
+          {skills1.map(skill => (
+            <SkillImage key={skill.src} skill={skill} />
+          ))}
         </Carousel>
         <Spacer size='x-large' l='large' />
 
         <Carousel>
-          <img className={imageClassName} src='/images/css.png' alt='CSS' />
-          <img
-            className={imageClassName}
-            src={`/images/webpack${theme === THEME.LIGHT ? '-light' : ''}.png`}
-            alt='Webpack'
-          />
-          <img className={imageClassName} src='/images/graphql.png' alt='GraphQL' />
-          <img className={imageClassName} src='/images/typegraphql.png' alt='TypeGraphQL' />
-          <img className={imageClassName} src='/images/nodejs.png' alt='Node JS' />
-          <img className={imageClassName} src='/images/ffmpeg.png' alt='FFmpeg' />
+          {skills2.map(skill => (
+            <SkillImage key={skill.src} skill={skill} />
+          ))}
         </Carousel>
         <Spacer size='x-large' l='large' />
 
         <Carousel>
-          <img className={imageClassName} src='/images/javascript.png' alt='JavaScript' />
-          <img className={imageClassName} src='/images/typescript.png' alt='TypeScript' />
-          <img className={imageClassName} src='/images/socket.png' alt='Socket.IO' />
-          <img className={imageClassName} src='/images/babel.png' alt='Babel' />
-          <img className={imageClassName} src='/images/github.png' alt='GitHub' />
-          <img className={imageClassName} src='/images/expressjs.png' alt='Express JS' />
+          {skills3.map(skill => (
+            <SkillImage key={skill.src} skill={skill} />
+          ))}
         </Carousel>
         <Spacer size='x-large' />
 
