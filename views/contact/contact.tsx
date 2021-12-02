@@ -2,7 +2,6 @@ import React from 'react'
 import { Spacer, Stack, Text } from '../../components'
 import { Section } from '../section'
 import { ContactForm } from './contact-form/contact-form'
-import { Footer } from './footer'
 
 export function Contact() {
   return (
@@ -23,7 +22,6 @@ export function Contact() {
         </Stack>
         <Spacer size='small' ns='large' />
 
-        <Footer />
         <Spacer size='small' ns='none' />
       </Stack>
     </Section>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Logo, Spacer, Stack, Text } from '../../components'
+import { SocialLinks } from '../social-links'
 import { Resume } from './resume'
 
 export function Nav() {
@@ -12,24 +13,10 @@ export function Nav() {
         <Spacer size='small' />
         <Text fontSize={24}>Vikalp</Text>
 
-        <Stack horizontal verticalAlign='middle' hidden visible='ns'>
-          <Spacer size='normal' l='large' />
-          <Spacer size='none' l='large' />
-          <Text fontFamily='Poppins' thin fontSize={16}>
-            <a href='sms:+918690650665'>+91 86906 50665</a>
-          </Text>
-
-          <Spacer size='small' l='normal' />
-          <Stack opacity={0.5}>
-            <Text fontFamily='Poppins' thin fontSize={16}>
-              /
-            </Text>
-          </Stack>
-
-          <Spacer size='small' l='normal' />
-          <Text fontFamily='Poppins' thin fontSize={16}>
-            <a href='mailto:vikalppanseriya@gmail.com'>vikalppanseriya@gmail.com</a>
-          </Text>
+        <Spacer size='normal' l='large' />
+        <Spacer size='none' ns='large' />
+        <Stack hidden visible='ns'>
+          <SocialLinks />
         </Stack>
 
         <Spacer size='small' fill />
