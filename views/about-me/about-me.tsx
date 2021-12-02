@@ -10,7 +10,8 @@ export function AboutMe() {
       <Stack horizontal='l' fill>
         <Stack fill className='relative'>
           <Image
-            layout='fill'
+            width={1390}
+            height={1857}
             objectFit='contain'
             objectPosition='bottom'
             src='/images/my-photo.png'
