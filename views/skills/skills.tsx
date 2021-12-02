@@ -53,14 +53,14 @@ export function Skills() {
             <SkillImage key={skill.src} skill={skill} />
           ))}
         </Carousel>
-        <Spacer size='x-large' l='large' />
+        <Spacer size='x-large' />
 
         <Carousel>
           {skills2.map(skill => (
             <SkillImage key={skill.src} skill={skill} />
           ))}
         </Carousel>
-        <Spacer size='x-large' l='large' />
+        <Spacer size='x-large' />
 
         <Carousel>
           {skills3.map(skill => (
