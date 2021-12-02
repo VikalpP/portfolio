@@ -7,7 +7,7 @@ export function Knowabouts() {
       <Text fontSize={16}>Knowabouts</Text>
 
       <Spacer size='small' />
-      <Text thin fontSize={14} lineHeight={1.5}>
+      <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>
         An innovative “inverse social media” platform where your known ones create your profile by
         sharing what they “Know about” you.
       </Text>

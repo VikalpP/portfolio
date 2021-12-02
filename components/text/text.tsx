@@ -15,6 +15,7 @@ export interface TextProps {
   center?: boolean | BreakPoints
   left?: boolean | BreakPoints
   right?: boolean | BreakPoints
+  wordSpacing?: number
 }
 
 export const Text = memo(
@@ -30,6 +31,7 @@ export const Text = memo(
     center,
     left,
     right,
+    wordSpacing,
     color = COLOR.SECONDARY,
   }: TextProps) => {
     const { getColor } = useTheme()
@@ -37,10 +39,11 @@ export const Text = memo(
     const styles: CSSProperties = {
       fontSize,
       fontFamily: fontFamily ? `"${fontFamily}"` : undefined,
-      fontWeight: thin ? '200' : undefined,
+      fontWeight: thin ? '300' : undefined,
       color: getColor(color),
       fontStyle: italic ? 'italic' : undefined,
       lineHeight,
+      wordSpacing,
       ...style,
     }
 
