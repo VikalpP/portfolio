@@ -29,3 +29,10 @@
 .min-width-9 {
   min-width: 96rem;
 }
+
+.h1_5 {
+  height: 1.5rem;
+}
+.w1_5 {
+  width: 1.5rem;
+}
