@@ -15,8 +15,8 @@ export function BookClub() {
       <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>
         <ul className='pl3'>
           <li>
-            Tweaked text highlighting algorithm for intelligent and intuitive highlighting, which
-            helped to user retention to grow by 30%.
+            Tweaked text highlighting algorithm for an intelligent and intuitive way of highlighting
+            utilizing Firebase OCR, which increased user retention by 10%.
           </li>
           <li>
             Single-handedly converted the Highlighter desktop-focused website into fully mobile
@@ -29,8 +29,8 @@ export function BookClub() {
             </ExternalLink>
           </li>
           <li>
-            Integrated Analytics to understand user behavior, which helped in shaping the Product
-            direction.
+            Integrated <ExternalLink url='https://amplitude.com'>Analytics</ExternalLink> to
+            understand user behavior, which helped in shaping the Product direction.
           </li>
         </ul>
       </Text>

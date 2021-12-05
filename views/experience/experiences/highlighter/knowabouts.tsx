@@ -22,6 +22,10 @@ export function Knowabouts() {
             Managed authentication and contact management services end to end to ensure smooth user
             onboarding, user authentication and security management.
           </li>
+          <li>
+            Integrated UI components shared between react web &amp; react-native client
+            applications.
+          </li>
         </ul>
       </Text>
     </Stack>
