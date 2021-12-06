@@ -19,6 +19,8 @@ export function HighlighterExperience() {
       <Text thin fontSize={18}>
         Full Stack Developer (Remote)
       </Text>
+
+      <Spacer size='small' />
       <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>
         Highlighter is a product-based company focused on building community and content
         creation/consumption platforms.

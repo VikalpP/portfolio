@@ -17,7 +17,7 @@ export function MJInfotechExperience() {
         Android Developer
       </Text>
 
-      <Spacer />
+      <Spacer size='small' />
       <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>
         MJ Infotech is a mobile app development company.
       </Text>

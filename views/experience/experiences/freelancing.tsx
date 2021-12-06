@@ -17,7 +17,7 @@ export function FreelancingExperience() {
         Freelancer
       </Text>
 
-      <Spacer />
+      <Spacer size='small' />
       <Text thin fontSize={14} lineHeight={1.5}>
         My Photos - An android app to organize user’s photos, videos &amp; albums.
       </Text>

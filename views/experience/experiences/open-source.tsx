@@ -17,7 +17,7 @@ export function OpenSourceExperience() {
         Open Source Contributor
       </Text>
 
-      <Spacer />
+      <Spacer size='small' />
       <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>
         CodeceptJS is a NodeJS testing framework for E2E testing. It abstracts browser interaction
         into simple steps which are written from a user perspective.
