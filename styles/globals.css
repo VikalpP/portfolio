@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --accent-color: #f8d57e;
   --scrollbar-inactive-scroll: #f8d57e4d;
