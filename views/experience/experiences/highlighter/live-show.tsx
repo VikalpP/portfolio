@@ -4,7 +4,9 @@ import { ExternalLink, Spacer, Stack, Text } from '../../../../components'
 export function LiveShow() {
   return (
     <Stack fillHorizontal>
-      <Text fontSize={16}>Highlighter (Live Show)</Text>
+      <Text fontSize={18}>
+        Highlighter (Live Show) (<ExternalLink url='https://highlighter.com'>web</ExternalLink>)
+      </Text>
 
       <Spacer size='small' />
       <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>

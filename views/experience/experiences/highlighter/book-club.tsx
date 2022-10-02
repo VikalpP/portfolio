@@ -4,7 +4,7 @@ import { ExternalLink, Spacer, Stack, Text } from '../../../../components'
 export function BookClub() {
   return (
     <Stack fillHorizontal>
-      <Text fontSize={16}>Highlighter (Book Club)</Text>
+      <Text fontSize={18}>Highlighter (Book Club)</Text>
 
       <Spacer size='small' />
       <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>

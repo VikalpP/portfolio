@@ -1,4 +1,5 @@
 export * from './freelancing'
 export * from './highlighter'
+export * from './mightybyte'
 export * from './mjInfotech'
 export * from './open-source'

@@ -9,6 +9,7 @@ import { ExperienceDetails } from './experience-details'
 const useSelectedExperienceState = createPersistedState('selectedExperience')
 
 export enum ExperienceType {
+  MightyByte = 'MightyByte',
   Highlighter = 'Highlighter',
   OpenSource = 'OpenSource',
   FreeLancing = 'FreeLancing',
@@ -16,6 +17,7 @@ export enum ExperienceType {
 }
 
 const experiences = [
+  { key: ExperienceType.MightyByte, title: 'MightyByte' },
   { key: ExperienceType.Highlighter, title: 'Highlighter' },
   { key: ExperienceType.OpenSource, title: 'Open Source' },
   { key: ExperienceType.FreeLancing, title: 'Freelancing' },

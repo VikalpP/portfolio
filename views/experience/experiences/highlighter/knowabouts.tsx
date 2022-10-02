@@ -4,7 +4,7 @@ import { Spacer, Stack, Text } from '../../../../components'
 export function Knowabouts() {
   return (
     <Stack fillHorizontal>
-      <Text fontSize={16}>Knowabouts</Text>
+      <Text fontSize={18}>Knowabouts</Text>
 
       <Spacer size='small' />
       <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>
