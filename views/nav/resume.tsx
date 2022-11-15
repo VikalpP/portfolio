@@ -7,6 +7,7 @@ export function Resume() {
   return (
     <a
       download
+      className='download'
       href='https://drive.google.com/uc?id=1cYWnjTmIAu4E8Ioq9dqEhzDwFAhMlFbJ&export=download'
     >
       <Button theme={COLOR.ACCENT} rounded>
