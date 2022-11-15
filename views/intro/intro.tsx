@@ -32,9 +32,9 @@ export function Intro() {
         <Spacer size='none' l='x-large' />
         <Spacer size='x-large' />
 
-        <Stack hidden='ns'>
+        <div className='social-links-intro-section'>
           <SocialLinks />
-        </Stack>
+        </div>
       </Stack>
     </Section>
   )

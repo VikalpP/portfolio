@@ -16,15 +16,14 @@ export function Nav() {
         <Text fontSize={24}>Vikalp</Text>
 
         <Spacer size='normal' l='large' />
-        <Spacer size='none' ns='large' />
-        <Stack hidden visible='ns'>
+        <div className='social-links-navbar'>
           <SocialLinks />
-        </Stack>
+        </div>
 
         <Spacer size='small' fill />
 
         <div
-          className='relative bg-dark-gray pa1 br-pill overflow-hidden pointer o-90'
+          className='relative bg-dark-gray pa1 br-pill overflow-hidden pointer o-90 flex-shrink-0 theme-toggle'
           onClick={toggleTheme}
         >
           <input type='toggleThemeCheckbox' className='o-0 absolute' id='checkbox' />
