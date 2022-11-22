@@ -20,7 +20,7 @@
     "use-persisted-state": "^0.3.3"
   },
   "devDependencies": {
-    "@svgr/webpack": "^5.5.0",
+    "@svgr/webpack": "^6.5.1",
     "@types/lodash.throttle": "^4.1.6",
     "@types/moxy__next-router-scroll": "^2.2.1",
     "@types/node": "16.11.10",
