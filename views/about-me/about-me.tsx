@@ -4,6 +4,10 @@ import { Section } from '../section'
 import Image from 'next/image'
 
 export function AboutMe() {
+  const experienceStartYear = 2018
+  const currentYear = new Date().getFullYear()
+  const experienceYears = currentYear - experienceStartYear
+
   return (
     <Section title='About'>
       <Spacer size='normal' l='none' />
@@ -24,7 +28,7 @@ export function AboutMe() {
 
           <Stack fillHorizontal>
             <Text italic thin className='f3-ns f4' lineHeight={1.2} left='l' center='m' right>
-              Vikalp is a Software Engineer with 3+ years of experience.
+              Vikalp is a Software Engineer with {experienceYears}+ years of experience.
               <Spacer size='small' l='normal' />
               He’s always a learners. — Thirsty for new tech solutions and eager to use them
               optimally.
