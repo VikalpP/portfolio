@@ -3,10 +3,14 @@ import { Spacer, Stack, Text } from '../../components'
 import { Section } from '../section'
 import Image from 'next/image'
 
+const yearInMs = 1000 * 3600 * 24 * 30 * 12
+
 export function AboutMe() {
-  const experienceStartYear = 2018
-  const currentYear = new Date().getFullYear()
-  const experienceYears = currentYear - experienceStartYear
+  const experienceStartDate = new Date(2018, 6)
+  const currentYear = new Date()
+  const experienceYears = Math.floor(
+    (currentYear.getTime() - experienceStartDate.getTime()) / yearInMs,
+  )
 
   return (
     <Section title='About'>
