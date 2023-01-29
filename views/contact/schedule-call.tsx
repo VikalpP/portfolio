@@ -1,14 +1,14 @@
-import React from 'react'
+import Image from 'next/image'
 import { PopupButton } from 'react-calendly'
 import { COLOR, Spacer, Stack, Text, useTheme } from '../../components'
-import Image from 'next/image'
+import zoomIcon from '../../public/images/zoom.webp'
 
 export function ScheduleCall() {
   const { getColor } = useTheme()
   const content = (
     <Stack horizontal verticalAlign='middle'>
       <Stack className='flex relative h1_5 w1_5'>
-        <Image layout='fill' src='/images/zoom.webp' alt='Zoom' objectFit='contain' />
+        <Image layout='fill' src={zoomIcon} alt='Zoom' objectFit='contain' />
       </Stack>
       <Spacer size='x-small' />
       <Text className='flex-shrink-0'>Catchup on a call?</Text>
@@ -23,7 +23,7 @@ export function ScheduleCall() {
         styles={{
           color: getColor(COLOR.SECONDARY),
           borderColor: '#468DF7',
-          width: 'max-content'
+          width: 'max-content',
         }}
         url='https://calendly.com/vikalppanseriya/20min'
       />

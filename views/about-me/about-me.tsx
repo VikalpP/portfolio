@@ -1,7 +1,7 @@
-import React from 'react'
-import { Spacer, Stack, Text } from '../../components'
-import { Section } from '../section'
 import Image from 'next/image'
+import { Spacer, Stack, Text } from '../../components'
+import myPhoto from '../../public/images/my-photo.webp'
+import { Section } from '../section'
 
 const yearInMs = 1000 * 3600 * 24 * 30 * 12
 
@@ -17,15 +17,7 @@ export function AboutMe() {
       <Spacer size='normal' l='none' />
       <Stack horizontal='l' fill>
         <Stack fill className='relative'>
-          <Image
-            width={1390}
-            height={1857}
-            objectFit='contain'
-            objectPosition='bottom'
-            src='/images/my-photo.webp'
-            alt={`Vikalp's Photo`}
-            priority
-          />
+          <Image objectFit='contain' objectPosition='bottom' src={myPhoto} alt={`Vikalp's Photo`} />
         </Stack>
         <Stack fill='l' horizontal verticalAlign='middle' padding='large none'>
           <Spacer size='none' ns='normal' />

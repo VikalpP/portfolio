@@ -3,6 +3,7 @@ import { Logo, Spacer, Stack, Text, THEME, useTheme } from '../../components'
 import { SocialLinks } from '../social-links'
 import { Resume } from './resume'
 import styles from './styles.module.css'
+import moonImage from '../../public/images/moon.webp'
 
 export function Nav() {
   const { theme, toggleTheme } = useTheme()
@@ -22,6 +23,7 @@ export function Nav() {
 
         <Spacer size='small' fill />
 
+        {/* Fix the rounded shape toggle for Safari */}
         <div
           className='relative bg-dark-gray pa1 br-pill overflow-hidden pointer o-90 flex-shrink-0 theme-toggle'
           onClick={toggleTheme}
@@ -32,7 +34,7 @@ export function Nav() {
             className='flex relative pointer br-pill overflow-hidden'
           >
             <Image
-              src='/images/moon.webp'
+              src={moonImage}
               alt='moon'
               width={32}
               height={32}

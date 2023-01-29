@@ -1,44 +1,54 @@
-import React from 'react'
 import { Carousel, FadingOverlay, Spacer, Stack, THEME, useTheme } from '../../components'
+import apolloLightImage from '../../public/images/apollo-light.webp'
+import apolloImage from '../../public/images/apollo.webp'
+import babelImage from '../../public/images/babel.webp'
+import cssImage from '../../public/images/css.webp'
+import expressJsImage from '../../public/images/expressjs.webp'
+import ffmpegImage from '../../public/images/ffmpeg.webp'
+import githubImage from '../../public/images/github.webp'
+import graphqlImage from '../../public/images/graphql.webp'
+import htmlImage from '../../public/images/html.webp'
+import javascriptImage from '../../public/images/javascript.webp'
+import nodeJsImage from '../../public/images/nodejs.webp'
+import razzelImage from '../../public/images/razzel.webp'
+import reactImage from '../../public/images/react.webp'
+import sassImage from '../../public/images/sass.webp'
+import socketImage from '../../public/images/socket.webp'
+import storybookImage from '../../public/images/storybook.webp'
+import typeGraphqlImage from '../../public/images/typegraphql.webp'
+import typescriptImage from '../../public/images/typescript.webp'
+import webpackLightImage from '../../public/images/webpack-light.webp'
+import webpackImage from '../../public/images/webpack.webp'
 import { Section } from '../section'
 import { SkillImage } from './skill-image'
 
 export function Skills() {
   const { theme } = useTheme()
+  const lightTheme = theme === THEME.LIGHT
 
   const skills1 = [
-    { src: '/images/html.webp', alt: 'HTML', width: 640, height: 640 },
-    { src: '/images/react.webp', alt: 'React', width: 244, height: 244 },
-    { src: '/images/storybook.webp', alt: 'StoryBook', width: 2082, height: 495 },
-    { src: '/images/sass.webp', alt: 'SASS', width: 664, height: 408 },
-    {
-      src: theme === THEME.LIGHT ? '/images/apollo-light.webp' : '/images/apollo.webp',
-      alt: 'HTML',
-      width: 1024,
-      height: 351,
-    },
-    { src: '/images/razzel.webp', alt: 'Razzel', width: 646, height: 180 },
+    { image: htmlImage, alt: 'HTML' },
+    { image: reactImage, alt: 'React' },
+    { image: storybookImage, alt: 'StoryBook' },
+    { image: sassImage, alt: 'SASS' },
+    { image: lightTheme ? apolloLightImage : apolloImage, alt: 'Apollo' },
+    { image: razzelImage, alt: 'Razzel' },
   ]
   const skills2 = [
-    { src: '/images/css.webp', alt: 'CSS', width: 640, height: 640 },
-    {
-      src: theme === THEME.LIGHT ? '/images/webpack-light.webp' : '/images/webpack.webp',
-      alt: 'Webpack',
-      width: 3916,
-      height: 1524,
-    },
-    { src: '/images/graphql.webp', alt: 'GraphQL', width: 652, height: 248 },
-    { src: '/images/typegraphql.webp', alt: 'TypeGraphQL', width: 1058, height: 772 },
-    { src: '/images/nodejs.webp', alt: 'Node JS', width: 668, height: 408 },
-    { src: '/images/ffmpeg.webp', alt: 'FFmpeg', width: 876, height: 280 },
+    { image: cssImage, alt: 'CSS' },
+    { image: lightTheme ? webpackLightImage : webpackImage, alt: 'Webpack' },
+    { image: graphqlImage, alt: 'GraphQL' },
+    { image: typeGraphqlImage, alt: 'TypeGraphQL' },
+    { image: nodeJsImage, alt: 'Node JS' },
+    { image: ffmpegImage, alt: 'FFmpeg' },
   ]
   const skills3 = [
-    { src: '/images/javascript.webp', alt: 'JavaScript', width: 504, height: 504 },
-    { src: '/images/typescript.webp', alt: 'TypeScript', width: 432, height: 432 },
-    { src: '/images/socket.webp', alt: 'Socket.IO', width: 530, height: 194 },
-    { src: '/images/babel.webp', alt: 'Babel', width: 904, height: 432 },
-    { src: '/images/github.webp', alt: 'GitHub', width: 288, height: 288 },
-    { src: '/images/expressjs.webp', alt: 'Express JS', width: 535, height: 216 },
+    { image: javascriptImage, alt: 'JavaScript' },
+    { image: typescriptImage, alt: 'TypeScript' },
+    { image: socketImage, alt: 'Socket.IO' },
+    { image: babelImage, alt: 'Babel' },
+    { image: githubImage, alt: 'GitHub' },
+    { image: expressJsImage, alt: 'Express JS' },
   ]
 
   return (
@@ -50,21 +60,21 @@ export function Skills() {
 
         <Carousel>
           {skills1.map(skill => (
-            <SkillImage key={skill.src} skill={skill} />
+            <SkillImage key={skill.image.src} image={skill.image} alt={skill.alt} />
           ))}
         </Carousel>
         <Spacer size='x-large' />
 
         <Carousel>
           {skills2.map(skill => (
-            <SkillImage key={skill.src} skill={skill} />
+            <SkillImage key={skill.image.src} image={skill.image} alt={skill.alt} />
           ))}
         </Carousel>
         <Spacer size='x-large' />
 
         <Carousel>
           {skills3.map(skill => (
-            <SkillImage key={skill.src} skill={skill} />
+            <SkillImage key={skill.image.src} image={skill.image} alt={skill.alt} />
           ))}
         </Carousel>
         <Spacer size='x-large' />
