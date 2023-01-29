@@ -32,7 +32,7 @@ export function Nav() {
             className='flex relative pointer br-pill overflow-hidden'
           >
             <Image
-              src='/images/moon.png'
+              src='/images/moon.webp'
               alt='moon'
               width={32}
               height={32}

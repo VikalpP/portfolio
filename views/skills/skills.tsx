@@ -7,38 +7,38 @@ export function Skills() {
   const { theme } = useTheme()
 
   const skills1 = [
-    { src: '/images/html.png', alt: 'HTML', width: 640, height: 640 },
-    { src: '/images/react.png', alt: 'React', width: 244, height: 244 },
-    { src: '/images/storybook.png', alt: 'StoryBook', width: 2082, height: 495 },
-    { src: '/images/sass.png', alt: 'SASS', width: 664, height: 408 },
+    { src: '/images/html.webp', alt: 'HTML', width: 640, height: 640 },
+    { src: '/images/react.webp', alt: 'React', width: 244, height: 244 },
+    { src: '/images/storybook.webp', alt: 'StoryBook', width: 2082, height: 495 },
+    { src: '/images/sass.webp', alt: 'SASS', width: 664, height: 408 },
     {
-      src: theme === THEME.LIGHT ? '/images/apollo-light.png' : '/images/apollo.png',
+      src: theme === THEME.LIGHT ? '/images/apollo-light.webp' : '/images/apollo.webp',
       alt: 'HTML',
       width: 1024,
       height: 351,
     },
-    { src: '/images/razzel.png', alt: 'Razzel', width: 646, height: 180 },
+    { src: '/images/razzel.webp', alt: 'Razzel', width: 646, height: 180 },
   ]
   const skills2 = [
-    { src: '/images/css.png', alt: 'CSS', width: 640, height: 640 },
+    { src: '/images/css.webp', alt: 'CSS', width: 640, height: 640 },
     {
-      src: theme === THEME.LIGHT ? '/images/webpack-light.png' : '/images/webpack.png',
+      src: theme === THEME.LIGHT ? '/images/webpack-light.webp' : '/images/webpack.webp',
       alt: 'Webpack',
       width: 3916,
       height: 1524,
     },
-    { src: '/images/graphql.png', alt: 'GraphQL', width: 652, height: 248 },
-    { src: '/images/typegraphql.png', alt: 'TypeGraphQL', width: 1058, height: 772 },
-    { src: '/images/nodejs.png', alt: 'Node JS', width: 668, height: 408 },
-    { src: '/images/ffmpeg.png', alt: 'FFmpeg', width: 876, height: 280 },
+    { src: '/images/graphql.webp', alt: 'GraphQL', width: 652, height: 248 },
+    { src: '/images/typegraphql.webp', alt: 'TypeGraphQL', width: 1058, height: 772 },
+    { src: '/images/nodejs.webp', alt: 'Node JS', width: 668, height: 408 },
+    { src: '/images/ffmpeg.webp', alt: 'FFmpeg', width: 876, height: 280 },
   ]
   const skills3 = [
-    { src: '/images/javascript.png', alt: 'JavaScript', width: 504, height: 504 },
-    { src: '/images/typescript.png', alt: 'TypeScript', width: 432, height: 432 },
-    { src: '/images/socket.png', alt: 'Socket.IO', width: 530, height: 194 },
-    { src: '/images/babel.png', alt: 'Babel', width: 904, height: 432 },
-    { src: '/images/github.png', alt: 'GitHub', width: 288, height: 288 },
-    { src: '/images/expressjs.png', alt: 'Express JS', width: 535, height: 216 },
+    { src: '/images/javascript.webp', alt: 'JavaScript', width: 504, height: 504 },
+    { src: '/images/typescript.webp', alt: 'TypeScript', width: 432, height: 432 },
+    { src: '/images/socket.webp', alt: 'Socket.IO', width: 530, height: 194 },
+    { src: '/images/babel.webp', alt: 'Babel', width: 904, height: 432 },
+    { src: '/images/github.webp', alt: 'GitHub', width: 288, height: 288 },
+    { src: '/images/expressjs.webp', alt: 'Express JS', width: 535, height: 216 },
   ]
 
   return (

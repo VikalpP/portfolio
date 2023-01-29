@@ -8,7 +8,7 @@ export function ScheduleCall() {
   const content = (
     <Stack horizontal verticalAlign='middle'>
       <Stack className='flex relative h1_5 w1_5'>
-        <Image layout='fill' src='/images/zoom.png' alt='Zoom' objectFit='contain' />
+        <Image layout='fill' src='/images/zoom.webp' alt='Zoom' objectFit='contain' />
       </Stack>
       <Spacer size='x-small' />
       <Text className='flex-shrink-0'>Catchup on a call?</Text>

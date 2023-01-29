@@ -22,7 +22,7 @@ export function AboutMe() {
             height={1857}
             objectFit='contain'
             objectPosition='bottom'
-            src='/images/my-photo.png'
+            src='/images/my-photo.webp'
             alt={`Vikalp's Photo`}
             priority
           />
