@@ -1,9 +1,20 @@
-import { Spacer, Stack, Text } from '../../../../components'
+import { ExternalLink, Spacer, Stack, Text } from '../../../../components'
+
+const ios = (
+  <ExternalLink url='https://apps.apple.com/in/app/singletosaddled/id1636840118'>iOS</ExternalLink>
+)
+const android = (
+  <ExternalLink url='https://play.google.com/store/apps/details?id=com.singletosaddled'>
+    Android
+  </ExternalLink>
+)
 
 export function STS() {
   return (
     <Stack fillHorizontal>
-      <Text fontSize={18}>SingleToSaddle</Text>
+      <Text fontSize={18}>
+        SingleToSaddle ({ios} | {android})
+      </Text>
 
       <Spacer size='small' />
       <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>
