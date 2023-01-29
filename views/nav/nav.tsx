@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import { Logo, Spacer, Stack, Text, THEME, useTheme } from '../../components'
+import moonImage from '../../public/images/moon.webp'
+import SunIcon from '../../public/svgs/sun.svg'
 import { SocialLinks } from '../social-links'
 import { Resume } from './resume'
 import styles from './styles.module.css'
-import moonImage from '../../public/images/moon.webp'
 
 export function Nav() {
   const { theme, toggleTheme } = useTheme()
@@ -41,13 +42,7 @@ export function Nav() {
               className={styles.rotateAnimation}
             />
             <Spacer size='x-small' />
-            <Image
-              src='/svgs/sun.svg'
-              alt='sun'
-              width={32}
-              height={32}
-              className={styles.rotateAnimation}
-            />
+            <SunIcon alt='sun' width={32} height={32} className={styles.rotateAnimation} />
 
             <div
               className='absolute bg-white w2 h2'
