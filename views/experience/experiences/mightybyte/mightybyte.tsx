@@ -9,7 +9,7 @@ export function MightyByteExperience() {
     <Stack fillHorizontal>
       <Stack opacity={0.6}>
         <Text fontSize={12} thin italic>
-          JAN 2022 - PRESENT
+          JAN 2022 - OCT 2022
         </Text>
       </Stack>
 
