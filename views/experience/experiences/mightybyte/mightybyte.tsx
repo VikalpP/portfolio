@@ -13,7 +13,7 @@ export function MightyByteExperience() {
         </Text>
       </Stack>
 
-      <Text fontSize={24} color={COLOR.ACCENT} lineHeight={1.6}>
+      <Text fontSize={30} color={COLOR.ACCENT} lineHeight={1.6}>
         MightyByte
       </Text>
       <Text thin fontSize={18}>

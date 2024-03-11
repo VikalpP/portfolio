@@ -1,7 +1,15 @@
-import React, { CSSProperties, useCallback, useMemo, useState } from 'react'
+import React, {
+  CSSProperties,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useState,
+} from 'react'
 import { COLOR, useTheme } from '../theme'
+import { Text } from '../text'
 
-type Item<T> = { key: T; title: string }
+type Item<T> = { key: T; title: string; experienceTime: string }
 
 interface Props<T> {
   items: Item<T>[]
@@ -16,16 +24,22 @@ export function Selector<T>({ items, selectedItem, onSelect }: Props<T>) {
   const { getColor } = useTheme()
 
   const selectedTextStyle: CSSProperties = useMemo(
-    () => ({ color: getColor(COLOR.ACCENT), fontWeight: 500, fontSize: 18 }),
+    () => ({
+      color: getColor(COLOR.ACCENT),
+      fontWeight: 500,
+      fontSize: 24,
+      transition: 'font-size 300ms ease',
+    }),
     [getColor],
   )
 
   const unselectedTextStyle: CSSProperties = useMemo(
     () => ({
-      color: getColor(COLOR.SECONDARY),
-      opacity: 0.7,
+      color: getColor(COLOR.ACCENT),
+      opacity: 0.5,
       fontWeight: 300,
       fontSize: 18,
+      transition: 'font-size 300ms ease',
     }),
     [getColor],
   )
@@ -63,11 +77,14 @@ export function Selector<T>({ items, selectedItem, onSelect }: Props<T>) {
         {items.map((item, index) => (
           <span
             key={index}
-            className='h3 pa3 flex items-center justify-end pointer flex-shrink-0'
+            className='h3 pa3 flex items-end justify-end pointer flex-shrink-0 flex-column'
             onClick={onPressItem(item, index)}
             style={selectedIndex === index ? selectedTextStyle : unselectedTextStyle}
           >
             {item.title}
+            <Text fontSize={10} thin italic style={{ marginTop: 2 }}>
+              {item.experienceTime}
+            </Text>
           </span>
         ))}
       </div>

@@ -18,12 +18,12 @@ export enum ExperienceType {
 }
 
 const experiences = [
-  { key: ExperienceType.Retainit, title: 'Retainit' },
-  { key: ExperienceType.MightyByte, title: 'MightyByte' },
-  { key: ExperienceType.Highlighter, title: 'Highlighter' },
-  { key: ExperienceType.OpenSource, title: 'Open Source' },
-  { key: ExperienceType.FreeLancing, title: 'Freelancing' },
-  { key: ExperienceType.MJInfotech, title: 'MJ Infotech' },
+  { key: ExperienceType.Retainit, title: 'Retainit', experienceTime: 'JAN 2023 - PRESENT' },
+  { key: ExperienceType.MightyByte, title: 'MightyByte', experienceTime: 'JAN 2022 - OCT 2022' },
+  { key: ExperienceType.Highlighter, title: 'Highlighter', experienceTime: 'SEPT 2019 - DEC 2021' },
+  { key: ExperienceType.OpenSource, title: 'Open Source', experienceTime: 'JUN 2019 - AUG 2019' },
+  { key: ExperienceType.FreeLancing, title: 'Freelancing', experienceTime: 'FEB 2019 - MAR 2019' },
+  { key: ExperienceType.MJInfotech, title: 'MJ Infotech', experienceTime: 'JUL 2018 - JAN 2019' },
 ]
 
 export function Experience() {
@@ -46,7 +46,7 @@ export function Experience() {
         <Stack className='relative' horizontal fill maxWidth='normal' padding='none large'>
           <Spacer size='none' l='normal' />
 
-          <div className='flex flex-column' style={{ minWidth: 160 }}>
+          <div className='flex flex-column' style={{ minWidth: 190 }}>
             <Spacer size='x-large' />
             <Selector items={experiences} selectedItem={selectedExperience} onSelect={onSelect} />
           </div>

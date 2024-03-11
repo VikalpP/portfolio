@@ -13,7 +13,7 @@ export function HighlighterExperience() {
         </Text>
       </Stack>
 
-      <Text fontSize={24} color={COLOR.ACCENT} lineHeight={1.6}>
+      <Text fontSize={30} color={COLOR.ACCENT} lineHeight={1.6}>
         Highlighter Inc.
       </Text>
       <Text thin fontSize={18}>
