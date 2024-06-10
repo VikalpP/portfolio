@@ -27,7 +27,10 @@ export function MightyByteExperience() {
 
       <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>
         <ul className='pl3'>
-          <li>Lead engineer in multiple projects.</li>
+          <li>
+            Engineered innovative solutions for diverse client needs, increasing project completion
+            rates by 40% and reducing client operational costs by 20%.
+          </li>
           <li>Helped in 5+ technical interviews.</li>
         </ul>
       </Text>

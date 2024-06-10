@@ -15,11 +15,14 @@ export function IPermit() {
       <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>
         <ul className='pl3'>
           <li>
-            Lead Backend engineer architected a reliable system for 300+ daily contractors,
-            cross-syncing with other third-party CRM services like{' '}
-            <ExternalLink url='https://www.zoho.com/in/crm'>Zoho CRM</ExternalLink>.
+            Architected a reliable system handling 100K+ operations monthly as the lead backend
+            engineer.
           </li>
-          <li>Data syncing with Zoho CRM was a crucial part of the product.</li>
+          <li>
+            Engineered an automated data-sync pipeline with{' '}
+            <ExternalLink url='https://www.zoho.com/in/crm'>Zoho CRM</ExternalLink>, reducing data
+            discrepancies by 95% and saving 40+ hours monthly on manual tasks.
+          </li>
           <li>Tech Stack: Typescript, Node.js, MongoDB, ZOHO CRM.</li>
         </ul>
       </Text>

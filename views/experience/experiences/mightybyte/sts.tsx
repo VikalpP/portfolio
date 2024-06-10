@@ -12,20 +12,19 @@ const android = (
 export function STS() {
   return (
     <Stack fillHorizontal>
-      <Text fontSize={18}>
-        SingleToSaddle ({ios} | {android})
-      </Text>
+      <Text fontSize={18}>SingleToSaddled</Text>
 
       <Spacer size='small' />
       <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>
-        An online dating app.
+        an iOS dating app for cowboys and cowgirls, achieving 40% MAU growth and a 25% increase in
+        premium memberships in the first 3 months.
       </Text>
 
       <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>
         <ul className='pl3'>
           <li>
-            Lead a team of 3 people while mentoring them for Code quality, with rapid development
-            respecting the project deadline.
+            Developed a comprehensive matching algorithm based on gender preferences, distance, and
+            age range; increasing successful matches by 45%.
           </li>
           <li>Tech Stack: Typescript, React Native, Node.js, MongoDB.</li>
         </ul>

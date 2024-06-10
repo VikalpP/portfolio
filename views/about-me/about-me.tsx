@@ -6,7 +6,7 @@ import { Section } from '../section'
 const yearInMs = 1000 * 3600 * 24 * 30 * 12
 
 export function AboutMe() {
-  const experienceStartDate = new Date(2018, 6)
+  const experienceStartDate = new Date(2019, 6)
   const currentYear = new Date()
   const experienceYears = Math.floor(
     (currentYear.getTime() - experienceStartDate.getTime()) / yearInMs,
@@ -26,7 +26,7 @@ export function AboutMe() {
             <Text italic thin className='f3-ns f4' lineHeight={1.2} left='l' center='m' right>
               Vikalp is a Software Engineer with {experienceYears}+ years of experience.
               <Spacer size='small' l='normal' />
-              He’s always a learners. — Thirsty for new tech solutions and eager to use them
+              He’s a active learners. — Thirsty for latest tech solutions and eager to use them
               optimally.
               <Spacer size='small' l='normal' />
               He loves discussing clean code and solving problems.

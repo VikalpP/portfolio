@@ -1,5 +1,5 @@
 import React from 'react'
-import { Spacer, Stack, Text } from '../../../../components'
+import { ExternalLink, Spacer, Stack, Text } from '../../../../components'
 
 export function Knowabouts() {
   return (
@@ -15,17 +15,21 @@ export function Knowabouts() {
       <Text thin fontSize={14} lineHeight={1.5} wordSpacing={2}>
         <ul className='pl3'>
           <li>
-            Worked in a distributed system with 15+ micro-services build around GraphQL federation
+            Operated in a distributed system with 15+ microservices built around{' '}
+            <ExternalLink url='https://www.apollographql.com/docs/federation'>
+              GraphQL federation
+            </ExternalLink>{' '}
             architecture.
           </li>
           <li>
-            Managed authentication and contact management services end to end to ensure smooth user
-            onboarding, user authentication and security management.
+            Managed authentication and contact management services end-to-end to ensure smooth user
+            onboarding, authentication, and security management.
           </li>
           <li>
             Integrated UI components shared between react web &amp; react-native client
             applications.
           </li>
+          <li>Tech Stack: React Native, Apollo GraphQL, Express, GraphQL.</li>
         </ul>
       </Text>
     </Stack>

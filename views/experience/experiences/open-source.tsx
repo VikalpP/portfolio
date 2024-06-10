@@ -25,14 +25,17 @@ export function OpenSourceExperience() {
 
       <Text thin fontSize={14} lineHeight={1.5}>
         <ul className='pl3'>
-          <li>Worked on a large codebase in a fully distributed team.</li>
-          <li>Implemented feature to mock HTTP requests.</li>
           <li>
-            Parallelized running test cases by integrating{' '}
+            Implemented mocking HTTP requests by integrating{' '}
+            <ExternalLink url='https://netflix.github.io/pollyjs/'>Polly JS</ExternalLink>;
+            improving overall API response reliability by 25%.
+          </li>
+          <li>
+            Introduced multithreaded testing by integrating{' '}
             <ExternalLink url='https://nodejs.org/api/worker_threads.html'>
-              NodeJS workers
+              Node JS workers
             </ExternalLink>
-            .
+            , improving the overall runtime by 70%.
           </li>
           <li>
             <ExternalLink url='https://github.com/codeceptjs/CodeceptJS/pulls?q=is%3Apr+author%3AVikalpP'>
