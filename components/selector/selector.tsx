@@ -18,9 +18,7 @@ interface Props<T> {
 }
 
 export function Selector<T>({ items, selectedItem, onSelect }: Props<T>) {
-  const [selectedIndex, setSelectedIndex] = useState(
-    (selectedItem && items.findIndex(i => i.key === selectedItem)) || 0,
-  )
+  const [selectedIndex, setSelectedIndex] = useState(0)
   const { getColor } = useTheme()
 
   const selectedTextStyle: CSSProperties = useMemo(
@@ -70,6 +68,12 @@ export function Selector<T>({ items, selectedItem, onSelect }: Props<T>) {
     },
     [onSelect],
   )
+
+  useEffect(() => {
+    if (selectedItem) {
+      setSelectedIndex(items.findIndex(i => i.key === selectedItem))
+    }
+  }, [selectedItem, items])
 
   return (
     <div className='flex justify-end'>
