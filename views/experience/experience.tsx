@@ -18,7 +18,7 @@ export enum ExperienceType {
 }
 
 const experiences = [
-  { key: ExperienceType.Retainit, title: 'Retainit', experienceTime: 'JAN 2023 - PRESENT' },
+  { key: ExperienceType.Retainit, title: 'Retainit', experienceTime: 'JAN 2023 - JUN 2024' },
   { key: ExperienceType.MightyByte, title: 'MightyByte', experienceTime: 'JAN 2022 - OCT 2022' },
   { key: ExperienceType.Highlighter, title: 'Highlighter', experienceTime: 'SEPT 2019 - DEC 2021' },
   { key: ExperienceType.OpenSource, title: 'Open Source', experienceTime: 'JUN 2019 - AUG 2019' },
