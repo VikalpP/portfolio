@@ -41,7 +41,7 @@ export function RetainitExperience() {
             Introduced and integrated <ExternalLink url='https://trpc.io/'>tRPC</ExternalLink>;
             reducing bug incidence by 40% and improving team efficiency by 25%.
           </li>
-          <li>Tech Stack: Typescript, React Native, Next.js, Node.js, MongoDB, Plasmo, tRPC.</li>
+          <li>Tech Stack: Typescript, React Native, Next.js, Node.js, MongoDB, tRPC.</li>
         </ul>
       </Text>
     </Stack>
